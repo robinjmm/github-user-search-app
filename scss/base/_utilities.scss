@@ -1,0 +1,41 @@
+:root {
+	// ================
+	// Dark Mode Colors
+	// ================
+
+	// Font Colors
+	--text-primary: hsl(0, 0%, 100%);
+	--text-accent-blue: hsl(212, 100%, 50%);
+	--text-accent-grey: hsl(222, 44%, 70%);
+	--text-accent-red: hsl(0, 91%, 62%);
+
+	// Background Colors
+	--bg-body: hsl(220, 40%, 13%);
+	--bg-search: hsl(222, 41%, 20%);
+	--bg-card: hsl(222, 41%, 20%);
+	--bg-button: hsl(212, 100%, 50%);
+	--bg-button-hover: hsl(212, 100%, 69%);
+
+	// Font Families
+	--ff-primary: "Space Mono", sans-serif;
+
+	// Font Sizes
+	--fs-xs: 0.8125rem;
+	--fs-sm: 0.9375rem;
+	--fs-md: 1rem;
+	--fs-lg: 1.375rem;
+	--fs-xl: 1.625rem;
+}
+
+
+// Convert pixel values to rem
+@function toRem($value) {
+	$remValue: calc(($value / 16) * 1rem);
+	@return $remValue;
+}
+
+// Convert pixel values to em
+@function toEm($value, $base-font-size: 16) {
+	$emValue: calc(($value / $base-font-size) * 1em);
+	@return $emValue;
+}

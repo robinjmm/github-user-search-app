@@ -25,8 +25,13 @@
 
 	<main>
 		<form>
-			<input type="text" name="username" id="username" placeholder="Search GitHub username...">
-			<button type="button">Search</button>
+			<input class="js-search-form"
+				   type="text"
+				   name="username"
+				   id="username"
+				   placeholder="Search GitHub username..."
+			>
+			<button class="js-search-button" type="submit">Search</button>
 		</form>
 
 		<div class="card">
@@ -34,7 +39,7 @@
 				<img src="" class="js-avatar" alt="The GitHub user's avatar" width="70" height="70">
 				<div>
 					<h1 class="js-public-name"></h1>
-					<a class="js-username" href="" title="User's GitHub link"></a>
+					<a class="js-username" href="" title="User's GitHub link" target="_blank"></a>
 					<p class="js-joined-date"></p>
 				</div>
 			</div>
