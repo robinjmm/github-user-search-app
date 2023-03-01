@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="My solution for the GitHub User Search App challenge from Frontendmentor.io">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+
+	<title>GitHub User Search App</title>
 </head>
 <body>
 
-  devfinder
+<div class="container">
+	<header>
+		<p>devfinder</p>
+		<button type="button">
+			Light
+			<img src="/images/icon-sun.svg" alt="A sun svg icon">
+		</button>
+	</header>
 
-  Light
-  Dark
+	<main>
+		<form>
+			<input type="text" name="username" id="username" placeholder="Search GitHub username...">
+			<button type="button">Search</button>
+		</form>
 
-  Search GitHub username...
-  Search
+		<div class="card">
+			<div class="card__header">
+				<img src="" class="js-avatar" alt="The GitHub user's avatar" width="70" height="70">
+				<div>
+					<h1 class="js-public-name"></h1>
+					<a class="js-username" href="" title="User's GitHub link"></a>
+					<p class="js-joined-date"></p>
+				</div>
+			</div>
 
-  Joined
+			<p class="card__bio js-bio"></p>
 
-  Repos
-  Followers
-  Following
+			<ul class="card_stats">
+				<li>
+					<span>Repos</span>
+					<span class="js-repos"></span>
+				</li>
 
+				<li>
+					<span>Followers</span>
+					<span class="js-followers"></span>
+				</li>
+
+				<li>
+					<span>Following</span>
+					<span class="js-following"></span>
+				</li>
+			</ul>
+
+			<ul class="card__socials" role="list">
+				<li>
+					<img src="/images/icon-location.svg" alt="User's location icon">
+					<span class="js-location"></span>
+				</li>
+
+				<li>
+					<img src="/images/icon-website.svg" alt="User's website icon">
+					<a class="js-website" href="" title="User's Website"></a>
+				</li>
+
+				<li>
+					<img src="/images/icon-twitter.svg" alt="User's twitter icon">
+					<a class="js-twitter" href="" title="User's Twitter Profile"></a>
+				</li>
+
+				<li>
+					<img src="/images/icon-company.svg" alt="User's company icon">
+					<span class="js-company"></span>
+				</li>
+			</ul>
+		</div>
+	</main>
+</div>
+
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>
