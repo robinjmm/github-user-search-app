@@ -4,4 +4,18 @@ body {
 	background-color: var(--bg-body);
 	color: var(--text-primary);
 	font-family: var(--ff-primary);
+	padding-top: toRem(30);
+	padding-bottom: toRem(80);
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: toRem(36);
+}
+
+.container {
+	width: min(87%, 730px);
+	margin: 0 auto;
 }

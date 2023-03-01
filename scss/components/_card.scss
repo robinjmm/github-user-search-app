@@ -1,0 +1,75 @@
+@use "../base/utilities" as *;
+
+.card {
+	font-size: var(--fs-xs);
+	background-color: var(--bg-card);
+	border-radius: toRem(15);
+	padding: toRem(32) toRem(24) toRem(48);
+
+	&__header {
+		display: flex;
+		gap: toRem(20);
+		align-items: center;
+	}
+
+	&__avatar {
+		border-radius: 50%;
+	}
+
+	&__name {
+		font-size: var(--fs-md);
+	}
+
+	&__username,
+	&__username:visited,
+	&__username:focus {
+		color: var(--text-accent-blue);
+	}
+
+	&__bio {
+		margin-top: toRem(33);
+		margin-bottom: toRem(23);
+	}
+
+	&__stats {
+		display: flex;
+		justify-content: space-between;
+		background-color: var(--bg-card-stats);
+		border-radius: toRem(10);
+		padding: toRem(18) toRem(14);
+	}
+
+	&__stats-item {
+		text-align: center;
+		font-size: toRem(11);
+	}
+
+	&__stats-value {
+		display: block;
+		font-size: var(--fs-md);
+		font-weight: 700;
+		margin-top: toRem(8);
+	}
+
+	&__socials {
+		margin-top: toRem(24);
+
+		&-link,
+		&-link:visited,
+		&-focus {
+			color: var(--text-primary);
+		}
+	}
+
+	&__socials-item {
+		//		color: var(--text-primary);
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+		margin-bottom: toRem(18);
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

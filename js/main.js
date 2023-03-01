@@ -26,7 +26,6 @@ function setContent(element, data) {
 
 function setLink(element, data) {
     if (!data) {
-        element.href = "#";
         element.style.cursor = "not-allowed";
     } else {
         element.href = data;
@@ -35,8 +34,6 @@ function setLink(element, data) {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
-    const searchForm = document.querySelector(".js-search-form");
-    const searchButton = document.querySelector(".js-search-button");
     const userAvatar = document.querySelector(".js-avatar");
     const userPublicName = document.querySelector(".js-public-name");
     const username = document.querySelector(".js-username");
@@ -50,12 +47,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const userTwitter = document.querySelector(".js-twitter");
     const userCompany = document.querySelector(".js-company");
 
-    searchButton.addEventListener("click", event => {
-        event.preventDefault();
-    })
-
-    const data = await getUser("robinjmm");
-    console.log(data);
+    const data = await getUser();
     const {
         avatar_url,
         name,
@@ -88,4 +80,4 @@ window.addEventListener("DOMContentLoaded", async () => {
     setLink(username, html_url);
     setLink(userWebsite, blog);
     setLink(userTwitter, twitter_username);
-})
+});
