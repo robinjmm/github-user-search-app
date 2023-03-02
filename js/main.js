@@ -1,11 +1,31 @@
 import "@fontawesome/fontawesome.css";
 import "@fontawesome/brands.css";
 import "@styles/styles.scss";
+import {wrapperFetch} from "./fetch.js";
 
+
+const API_ENDPOINT = "https://api.github.com/users/";
 
 async function getUser(user = "octocat") {
-    const response = await fetch(`https://api.github.com/users/${user}`);
-    return await response.json();
+    try {
+        const res = await wrapperFetch(`${API_ENDPOINT}${user}`);
+        return await res.json();
+    } catch (error) {
+        switch (error.response) {
+            case 400:
+                console.error("Bad Request Sent");
+                break;
+            case 401:
+                console.error("Not Authorized");
+                break;
+            case 404:
+                console.error("Resource Not Found");
+                break;
+            case 500:
+                console.error("Internal Server Error");
+                break;
+        }
+    }
 }
 
 function convertDate(isoDate) {
@@ -48,6 +68,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const userCompany = document.querySelector(".js-company");
 
     const data = await getUser();
+    console.log(data);
     const {
         avatar_url,
         name,
