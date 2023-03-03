@@ -4,16 +4,29 @@ form {
 	margin-bottom: toRem(16);
 }
 
-.search-form {
-	color: var(--text-primary);
-	background-color: var(--bg-search);
-	width: 100%;
-	border-radius: toRem(15);
-	border: none;
-	padding: toRem(18) 0 toRem(18) toRem(16);
+.search {
+	position: relative;
 
-	&::placeholder {
+	&__icon {
+		position: absolute;
+		width: toRem(21);
+		height: toRem(21);
+		top: 20px;
+		left: 16px;
+	}
+
+	&__form {
 		color: var(--text-primary);
-		font-size: var(--fs-xs);
+		background-color: var(--bg-search);
+		width: 100%;
+		border-radius: toRem(15);
+		border: none;
+		padding: toRem(18) 0 toRem(18) toRem(16);
+
+		&::placeholder {
+			color: var(--text-primary);
+			font-size: var(--fs-xs);
+			padding-left: toRem(30);
+		}
 	}
 }

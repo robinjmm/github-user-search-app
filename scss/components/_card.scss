@@ -56,13 +56,12 @@
 
 		&-link,
 		&-link:visited,
-		&-focus {
+		&-link:focus {
 			color: var(--text-primary);
 		}
 	}
 
 	&__socials-item {
-		//		color: var(--text-primary);
 		display: flex;
 		align-items: center;
 		gap: toRem(20);
