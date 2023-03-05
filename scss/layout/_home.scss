@@ -1,4 +1,4 @@
-@use "../base/utilities" as *;
+@use "../base/variables" as *;
 
 body {
 	background-color: var(--bg-body);
@@ -6,6 +6,7 @@ body {
 	font-family: var(--ff-primary);
 	padding-top: toRem(30);
 	padding-bottom: toRem(80);
+	font-weight: var(--fw-md);
 }
 
 header {

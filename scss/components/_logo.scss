@@ -1,6 +1,6 @@
-@use "../base/utilities" as *;
+@use "../base/variables" as *;
 
 .logo {
 	font-size: var(--fs-xl);
-	font-weight: 700;
+	font-weight: var(--fw-bold);
 }

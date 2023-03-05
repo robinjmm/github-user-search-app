@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+/*! purgecss start ignore */
+
+.not-available {
+	color: var(--text-accent-grey);
+	cursor: not-allowed;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/*! purgecss end ignore */

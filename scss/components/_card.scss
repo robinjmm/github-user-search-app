@@ -1,4 +1,4 @@
-@use "../base/utilities" as *;
+@use "../base/variables" as *;
 
 .card {
 	font-size: var(--fs-xs);
@@ -47,17 +47,19 @@
 	&__stats-value {
 		display: block;
 		font-size: var(--fs-md);
-		font-weight: 700;
+		font-weight: var(--fw-bold);
 		margin-top: toRem(8);
 	}
 
 	&__socials {
 		margin-top: toRem(24);
+	}
 
-		&-link,
-		&-link:visited,
-		&-link:focus {
-			color: var(--text-primary);
+	&__socials-link {
+		color: var(--text-primary);
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 
