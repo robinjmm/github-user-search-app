@@ -1,4 +1,0 @@
-# Enforce proper editor indentation for scss files
-[*.scss]
-indent_style = tab
-indent_size = 4
