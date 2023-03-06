@@ -31,9 +31,7 @@ async function getUser(user = "octocat") {
     }
 }
 
-window.addEventListener("DOMContentLoaded", async () => {
-    const data = await getUser();
-
+function displayData(data) {
     User.updateAvatar(".js-avatar", data.avatar_url);
 
     User.updatePublicName(".js-public-name", data.name)
@@ -57,4 +55,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     User.updateLocationAndCompany(".js-location", data.location);
 
     User.updateLocationAndCompany(".js-company", data.company);
+}
+
+window.addEventListener("DOMContentLoaded", async () => {
+    const searchForm = document.querySelector(".js-search-form");
+    const searchButton = document.querySelector(".js-search-button");
+
+    let data = await getUser();
+    displayData(data);
+
+    searchButton.addEventListener("click", async (event) => {
+        event.preventDefault();
+        data = await getUser(searchForm.value.trim());
+        displayData(data);
+    });
 });

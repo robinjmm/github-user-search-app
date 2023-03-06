@@ -6,12 +6,28 @@ function convertDate(isoDate, options = DATE_FORMAT_OPTIONS) {
     return `Joined ${formattedDate}`;
 }
 
-function disableSociaLink(element) {
-    element.innerText = "Not Available";
-    // Grey out the svg icons when there is no available info
-    element.previousElementSibling.children[0].style.fill = "var(--text-accent-grey)";
-    element.classList.add("disabled");
-    element.parentElement.classList.add("not-allowed");
+// Grey out and disable interaction with any element that has no available info from the API.
+function disableElement(element) {
+    if (element && element.previousElementSibling) {
+        element.previousElementSibling.children[0].style.fill = "var(--text-accent-grey)";
+        element.classList.add("disabled");
+        element.parentElement.classList.add("not-allowed");
+    } else {
+        element.classList.add("disabled");
+        element.parentElement.classList.add("not-allowed");
+    }
+}
+
+// Re enable previously disabled elements
+function enableElement(element) {
+    if (element && element.previousElementSibling) {
+        element.previousElementSibling.children[0].style.fill = "var(--text-primary)";
+        element.classList.remove("disabled");
+        element.parentElement.classList.remove("not-allowed");
+    } else {
+        element.classList.remove("disabled");
+        element.parentElement.classList.remove("not-allowed");
+    }
 }
 
 export function updateAvatar(className, data) {
@@ -42,10 +58,10 @@ export function updateBio(className, data) {
     const userBio = document.querySelector(className);
     if (!data) {
         userBio.innerText = "This profile has no bio";
-        userBio.classList.add("disabled");
-        userBio.parentElement.classList.add("not-allowed");
+        disableElement(userBio);
     } else {
         userBio.innerText = data;
+        enableElement(userBio);
     }
 }
 
@@ -58,28 +74,34 @@ export function updateStats(className, data) {
 export function updateLocationAndCompany(className, data) {
     const userLocationAndCompany = document.querySelector(className);
     if (!data) {
-        disableSociaLink(userLocationAndCompany);
+        userLocationAndCompany.innerText = "Not Available";
+        disableElement(userLocationAndCompany);
     } else {
         userLocationAndCompany.innerText = data;
+        enableElement(userLocationAndCompany);
     }
 }
 
 export function updateWebsite(className, data) {
     const userWebsite = document.querySelector(className);
     if (!data) {
-        disableSociaLink(userWebsite);
+        userWebsite.innerText = "Not Available";
+        disableElement(userWebsite);
     } else {
         userWebsite.innerText = data;
         userWebsite.href = data;
+        enableElement(userWebsite);
     }
 }
 
 export function updateTwitter(className, data) {
     const userTwitter = document.querySelector(className);
     if (!data) {
-        disableSociaLink(userTwitter);
+        userTwitter.innerText = "Not Available";
+        disableElement(userTwitter);
     } else {
         userTwitter.innerText = data;
         userTwitter.href = `https://twitter.com/${data}`;
+        enableElement(userTwitter);
     }
 }
