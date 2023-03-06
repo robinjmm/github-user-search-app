@@ -7,6 +7,7 @@ class ResponseError extends Error {
 
 export async function wrapperFetch(url, options) {
     const res = await fetch(url, options);
+
     if (!res.ok) {
         throw new ResponseError("Bad fetch response", res);
     }

@@ -2,13 +2,17 @@
 
 /*! purgecss start ignore */
 
-.not-available {
+.disabled {
 	color: var(--text-accent-grey);
-	cursor: not-allowed;
+	pointer-events: none;
 
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.not-allowed {
+	cursor: not-allowed;
 }
 
 /*! purgecss end ignore */
