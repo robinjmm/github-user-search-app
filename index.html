@@ -28,11 +28,11 @@
 		<main>
 			<form>
 				<div class="search">
-					<img class="search__icon" src="/images/icon-search.svg" alt="A magnifying glass icon">
+					<!-- Add label that's only visible for screen readers for accessibility purposes -->
 					<input class="search__form js-search-form" type="text" name="username" id="username"
 						placeholder="Search GitHub username...">
+					<button class="button button--search js-search-button" type="submit">Search</button>
 				</div>
-				<button class="button button--search js-search-button" type="submit">Search</button>
 			</form>
 
 			<div class="card">

@@ -22,8 +22,7 @@
 		padding: toRem(12) toRem(16);
 		cursor: pointer;
 
-		&:hover,
-		&:focus-visible {
+		&:active {
 			background-color: var(--bg-button-hover);
 		}
 	}

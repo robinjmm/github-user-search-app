@@ -57,16 +57,14 @@
 
 	&__socials-link {
 		color: var(--text-primary);
-
-		&:hover {
-			text-decoration: underline;
-		}
+		word-break: break-all;
 	}
 
 	&__socials-item {
-		display: flex;
+		display: grid;
+		grid-template-columns: 20px auto;
+		gap: toRem(13);
 		align-items: center;
-		gap: toRem(20);
 		margin-bottom: toRem(18);
 
 		&:last-of-type {

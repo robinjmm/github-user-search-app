@@ -1,0 +1,27 @@
+@use "../base/variables";
+
+@media (any-hover: hover) {
+    .card__socials-link:hover {
+        text-decoration: underline;
+    }
+
+    .button--search:hover {
+        background-color: var(--bg-button-hover);
+    }
+
+    .disabled:hover {
+        text-decoration: none;
+    }
+}
+
+// 375 pixels
+@media (min-width: 23.4375rem) {
+    .button--search {
+        margin-top: 0;
+        width: auto;
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
