@@ -1,0 +1,18 @@
+/*! purgecss start ignore */
+
+@use "../base/variables" as *;
+
+.disabled {
+    color: var(--text-accent-grey);
+    pointer-events: none;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.button--hidden {
+    display: none;
+}
+
+/*! purgecss end ignore */
