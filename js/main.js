@@ -60,6 +60,8 @@ function displayData(data) {
 window.addEventListener("DOMContentLoaded", async () => {
     const searchForm = document.querySelector(".js-search-form");
     const searchButton = document.querySelector(".js-search-button");
+    const toggleLightButton = document.querySelector(".js-light-toggle");
+    const toggleDarkButton = document.querySelector(".js-dark-toggle");
 
     let data = await getUser();
     displayData(data);
@@ -69,4 +71,16 @@ window.addEventListener("DOMContentLoaded", async () => {
         data = await getUser(searchForm.value.trim());
         displayData(data);
     });
+
+    toggleLightButton.addEventListener("click", event => {
+        event.currentTarget.classList.add("button--hidden");
+        toggleDarkButton.classList.remove("button--hidden");
+        document.documentElement.setAttribute("data-theme", "light");
+    });
+
+    toggleDarkButton.addEventListener("click", event => {
+        event.currentTarget.classList.add("button--hidden");
+        toggleLightButton.classList.remove("button--hidden");
+        document.documentElement.setAttribute("data-theme", "dark");
+    })
 });

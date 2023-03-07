@@ -1,6 +1,28 @@
-@use "../base/variables";
+@use "../base/variables" as *;
 
 @media (any-hover: hover) {
+    .button--theme-toggle:hover {
+        color: var(--text-accent-light-blue);
+
+        & svg g {
+            fill: var(--text-accent-light-blue);
+        }
+    }
+
+    [data-theme="light"] {
+        & .button--theme-toggle:hover {
+            color: hsla(220, 18%, 16%, 1);
+
+            & svg path {
+                fill: hsla(220, 18%, 16%, 1);
+            }
+        }
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
     .card__socials-link:hover {
         text-decoration: underline;
     }

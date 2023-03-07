@@ -5,7 +5,7 @@
 	border: none;
 	font-weight: var(--fw-bold);
 
-	&--transparent {
+	&--theme-toggle {
 		background-color: transparent;
 		font-size: var(--fs-xs);
 		letter-spacing: 2.5px;
@@ -20,7 +20,7 @@
 		font-size: var(--fs-xs);
 		border-radius: toRem(10);
 		padding: toRem(12) toRem(16);
-		cursor: pointer;
+
 
 		&:active {
 			background-color: var(--bg-button-hover);
