@@ -49,8 +49,7 @@
 
     .card__info {
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        align-items: center;
+        gap: toRem(5);
     }
 }
 
@@ -68,6 +67,8 @@
 
     .search__form {
         font-size: var(--fs-md);
+        padding-top: toRem(22);
+        padding-bottom: toRem(22);
         padding-left: toRem(80);
         background-position-x: toRem(32);
 
@@ -78,6 +79,7 @@
 
     .button--search {
         font-size: var(--fs-md);
+        right: 10px;
     }
 
     .card {
@@ -97,6 +99,11 @@
             font-size: var(--fs-md);
         }
 
+        &__bio {
+            margin-top: toRem(24);
+            margin-bottom: toRem(32);
+        }
+
         &__stats {
             padding: toRem(18) toRem(32);
         }
@@ -106,6 +113,7 @@
         }
 
         &__socials {
+            margin-top: toRem(36);
             display: grid;
             grid-template-columns: auto auto;
             gap: toRem(20) toRem(120);
@@ -113,6 +121,50 @@
 
         &__socials-item {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 64rem) {
+    .container {
+        max-width: 730px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: auto 480px;
+        column-gap: toRem(36);
+        padding: toRem(48);
+        padding-top: toRem(40);
+        position: relative;
+
+        &__avatar {
+            position: absolute;
+            left: 48px;
+            top: 40px;
+        }
+
+        &__info {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        &__joined-date {
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__username {
+            grid-row: 2 / 3;
+        }
+
+        &__header,
+        &__bio-wrapper,
+        &__stats,
+        &__socials {
+            grid-column: 2 / 3;
         }
     }
 }
