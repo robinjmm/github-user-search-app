@@ -46,4 +46,67 @@
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .card__info {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+    }
+}
+
+// 768 pixels
+@media (min-width: 41rem) {
+    .container {
+        max-width: 573px;
+    }
+
+    .search__form {
+        font-size: var(--fs-md);
+        padding-left: toRem(80);
+        background-position-x: toRem(32);
+
+        &::placeholder {
+            font-size: inherit;
+        }
+    }
+
+    .button--search {
+        font-size: var(--fs-md);
+    }
+
+    .card {
+        font-size: var(--fs-sm);
+        padding: toRem(40);
+
+        &__avatar {
+            width: 117px;
+            height: 117px;
+        }
+
+        &__name {
+            font-size: var(--fs-xl);
+        }
+
+        &__username {
+            font-size: var(--fs-md);
+        }
+
+        &__stats {
+            padding: toRem(18) toRem(32);
+        }
+
+        &__stats-value {
+            font-size: var(--fs-lg);
+        }
+
+        &__socials {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: toRem(20) toRem(120);
+        }
+
+        &__socials-item {
+            margin-bottom: 0;
+        }
+    }
 }
