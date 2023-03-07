@@ -4,7 +4,7 @@
     .button--theme-toggle:hover {
         color: var(--text-accent-light-blue);
 
-        & svg g {
+        & svg {
             fill: var(--text-accent-light-blue);
         }
     }

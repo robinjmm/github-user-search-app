@@ -5,6 +5,10 @@
 	border: none;
 	font-weight: var(--fw-bold);
 
+	& svg {
+		fill: var(--text-primary);
+	}
+
 	&--theme-toggle {
 		background-color: transparent;
 		font-size: var(--fs-xs);
