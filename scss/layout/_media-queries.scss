@@ -56,6 +56,12 @@
 
 // 768 pixels
 @media (min-width: 41rem) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
         max-width: 573px;
     }
