@@ -1,5 +1,5 @@
-import "@fontawesome/fontawesome.css";
-import "@fontawesome/brands.css";
+import "@fontawesome/fontawesome.min.css";
+import "@fontawesome/brands.min.css";
 import "@styles/styles.scss";
 import displayUserData from "./user";
 

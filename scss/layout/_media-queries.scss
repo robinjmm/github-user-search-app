@@ -56,6 +56,7 @@
 @media (min-width: 41rem) {
     body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

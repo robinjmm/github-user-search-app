@@ -16,6 +16,12 @@ header {
 	margin-bottom: toRem(36);
 }
 
+
+footer {
+	margin-top: toRem(40);
+	text-align: center;
+}
+
 .container {
 	width: min(87%, 730px);
 	margin: 0 auto;
