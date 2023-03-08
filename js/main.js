@@ -1,33 +1,16 @@
 import "@fontawesome/fontawesome.css";
 import "@fontawesome/brands.css";
 import "@styles/styles.scss";
-import { wrapperFetch } from "./responseError.js";
 import * as User from "./user.js";
 
 const API_ENDPOINT = "https://api.github.com/users/";
 
 async function getUser(user = "octocat") {
     try {
-        const res = await wrapperFetch(`${API_ENDPOINT}${user}`);
+        const res = await fetch(`${API_ENDPOINT}${user}`);
         return await res.json();
     } catch (error) {
-        switch (error.response) {
-            case 400:
-                console.error("Bad Request Sent");
-                break;
-            case 401:
-                console.error("Not Authorized");
-                break;
-            case 404:
-                console.error("Resource Not Found");
-                break;
-            case 500:
-                console.error("Internal Server Error");
-                break;
-            default:
-                console.error(`Unknown Error: ${error}`);
-                break;
-        }
+        console.error(`Error: ${error}`);
     }
 }
 
@@ -60,13 +43,24 @@ function displayData(data) {
 window.addEventListener("DOMContentLoaded", async () => {
     const searchForm = document.querySelector(".js-search-form");
     const searchButton = document.querySelector(".js-search-button");
+    const errorMessage = document.querySelector(".js-search-error");
 
     let data = await getUser();
     displayData(data);
 
+    searchForm.addEventListener("input", () => {
+        errorMessage.classList.add("error--hidden");
+    })
+
     searchButton.addEventListener("click", async (event) => {
         event.preventDefault();
         data = await getUser(searchForm.value.trim());
-        displayData(data);
+        if (!data.message) {
+            displayData(data);
+            searchForm.value = "";
+        } else {
+            errorMessage.innerText = "No results";
+            errorMessage.classList.remove("error--hidden");
+        }
     });
 });

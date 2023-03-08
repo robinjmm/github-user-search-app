@@ -41,9 +41,10 @@
 		<main>
 			<form>
 				<div class="search">
-					<!-- Add label that's only visible for screen readers for accessibility purposes -->
+					<!-- ! Add label that's only visible for screen readers for accessibility purposes -->
 					<input class="search__form js-search-form" type="text" name="username" id="username"
 						placeholder="Search GitHub username...">
+					<span class="search__error js-search-error error--hidden"></span>
 					<button class="button button--search js-search-button" type="submit">Search</button>
 				</div>
 			</form>

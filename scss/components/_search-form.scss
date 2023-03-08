@@ -26,4 +26,13 @@ form {
 			font-size: var(--fs-xs);
 		}
 	}
+
+	&__error {
+		font-size: var(--fs-xs);
+		font-weight: var(--fw-bold);
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		color: var(--text-error);
+	}
 }

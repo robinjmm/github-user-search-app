@@ -28,6 +28,15 @@
 
 // 375 pixels
 @media (min-width: 23.4375rem) {
+    .search__error {
+        width: auto;
+        text-align: initial;
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .button--search {
         margin-top: 0;
         width: auto;
@@ -69,6 +78,11 @@
         &::placeholder {
             font-size: inherit;
         }
+    }
+
+    .search__error {
+        right: 120px;
+        font-size: var(--fs-sm);
     }
 
     .button--search {
