@@ -3,7 +3,7 @@
 @use "../base/variables" as *;
 
 .disabled {
-    color: var(--text-accent-grey);
+    color: var(--text-disabled);
     pointer-events: none;
 }
 
