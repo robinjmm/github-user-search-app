@@ -9,7 +9,7 @@ function convertDate(isoDate, options = DATE_FORMAT_OPTIONS) {
 // Grey out and disable interaction with any element that has no available info from the API.
 function disableElement(element) {
     if (element && element.previousElementSibling) {
-        element.previousElementSibling.children[0].style.fill = "var(--text-accent-grey)";
+        element.previousElementSibling.style.fill = "var(--text-disabled)";
         element.classList.add("disabled");
         element.parentElement.classList.add("not-allowed");
     } else {
@@ -21,7 +21,7 @@ function disableElement(element) {
 // Re enable previously disabled elements
 function enableElement(element) {
     if (element && element.previousElementSibling) {
-        element.previousElementSibling.children[0].style.fill = "var(--text-primary)";
+        element.previousElementSibling.style.fill = "var(--text-primary)";
         element.classList.remove("disabled");
         element.parentElement.classList.remove("not-allowed");
     } else {

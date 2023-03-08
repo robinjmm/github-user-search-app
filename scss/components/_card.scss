@@ -67,6 +67,10 @@
 		align-items: center;
 		margin-bottom: toRem(18);
 
+		& svg {
+			fill: var(--text-primary);
+		}
+
 		&:last-of-type {
 			margin-bottom: 0;
 		}

@@ -60,10 +60,6 @@ function displayData(data) {
 window.addEventListener("DOMContentLoaded", async () => {
     const searchForm = document.querySelector(".js-search-form");
     const searchButton = document.querySelector(".js-search-button");
-    const themeToggle = document.querySelector(".js-theme-toggle");
-    const buttonText = document.querySelector(".js-button-text");
-    const sunSVG = document.querySelector(".js-sun-svg");
-    const moonSVG = document.querySelector(".js-moon-svg");
 
     let data = await getUser();
     displayData(data);

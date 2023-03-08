@@ -53,7 +53,7 @@
     }
 }
 
-// 768 pixels
+// 656 pixels
 @media (min-width: 41rem) {
     body {
         display: flex;
@@ -63,6 +63,10 @@
 
     .container {
         max-width: 573px;
+    }
+
+    form {
+        margin-bottom: toRem(24);
     }
 
     .search__form {
