@@ -9,6 +9,7 @@ function convertDate(isoDate, options = DATE_FORMAT_OPTIONS) {
 // Grey out and disable interaction with any element that has no available info from the API.
 function disableElement(element) {
     if (element && element.previousElementSibling) {
+        element.innerText = "Not Available";
         element.previousElementSibling.style.fill = "var(--text-disabled)";
         element.classList.add("disabled");
         element.parentElement.classList.add("not-allowed");
@@ -30,31 +31,31 @@ function enableElement(element) {
     }
 }
 
-export function updateAvatar(className, data) {
+function updateAvatar(className, data) {
     const avatar = document.querySelector(className);
     avatar.src = data;
 }
 
-export function updatePublicName(className, data) {
+function updatePublicName(className, data) {
     const publicName = document.querySelector(className);
     const content = data ? data : "";
     publicName.innerText = content;
 }
 
-export function updateUsername(className, data, link) {
+function updateUsername(className, data, link) {
     const username = document.querySelector(className);
     const content = data ? data : "";
     username.innerText = `@${content}`;
     username.href = link;
 }
 
-export function updateJoinedDate(className, data) {
+function updateJoinedDate(className, data) {
     const joinedDate = document.querySelector(className);
     const date = convertDate(data);
     joinedDate.innerText = date;
 }
 
-export function updateBio(className, data) {
+function updateBio(className, data) {
     const userBio = document.querySelector(className);
     if (!data) {
         userBio.innerText = "This profile has no bio";
@@ -65,16 +66,15 @@ export function updateBio(className, data) {
     }
 }
 
-export function updateStats(className, data) {
+function updateStats(className, data) {
     const userStats = document.querySelector(className);
     const value = data === 0 ? 0 : data;
     userStats.innerText = value;
 }
 
-export function updateLocationAndCompany(className, data) {
+function updateLocationAndCompany(className, data) {
     const userLocationAndCompany = document.querySelector(className);
     if (!data) {
-        userLocationAndCompany.innerText = "Not Available";
         disableElement(userLocationAndCompany);
     } else {
         userLocationAndCompany.innerText = data;
@@ -82,10 +82,9 @@ export function updateLocationAndCompany(className, data) {
     }
 }
 
-export function updateWebsite(className, data) {
+function updateWebsite(className, data) {
     const userWebsite = document.querySelector(className);
     if (!data) {
-        userWebsite.innerText = "Not Available";
         disableElement(userWebsite);
     } else {
         userWebsite.innerText = data;
@@ -94,14 +93,39 @@ export function updateWebsite(className, data) {
     }
 }
 
-export function updateTwitter(className, data) {
+function updateTwitter(className, data) {
     const userTwitter = document.querySelector(className);
     if (!data) {
-        userTwitter.innerText = "Not Available";
         disableElement(userTwitter);
     } else {
         userTwitter.innerText = data;
         userTwitter.href = `https://twitter.com/${data}`;
         enableElement(userTwitter);
     }
+}
+
+export default function displayUserData(data) {
+    updateAvatar(".js-avatar", data.avatar_url);
+
+    updatePublicName(".js-public-name", data.name)
+
+    updateUsername(".js-username", data.login, data.html_url);
+
+    updateJoinedDate(".js-joined-date", data.created_at);
+
+    updateBio(".js-bio", data.bio);
+
+    updateStats(".js-repos", data.public_repos);
+
+    updateStats(".js-followers", data.followers);
+
+    updateStats(".js-following", data.following);
+
+    updateWebsite(".js-website", data.blog);
+
+    updateTwitter(".js-twitter", data.twitter_username);
+
+    updateLocationAndCompany(".js-location", data.location);
+
+    updateLocationAndCompany(".js-company", data.company);
 }
