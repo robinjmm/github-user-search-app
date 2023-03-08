@@ -19,6 +19,7 @@ form {
 		border-radius: toRem(15);
 		border: none;
 		padding: toRem(18) 0 toRem(18) toRem(48);
+		box-shadow: var(--box-shadow);
 
 		&::placeholder {
 			color: var(--text-primary);

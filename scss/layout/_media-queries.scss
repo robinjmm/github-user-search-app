@@ -2,20 +2,10 @@
 
 @media (any-hover: hover) {
     .button--theme-toggle:hover {
-        color: var(--text-accent-light-blue);
+        color: var(--text-hover);
 
         & svg {
-            fill: var(--text-accent-light-blue);
-        }
-    }
-
-    [data-theme="light"] {
-        & .button--theme-toggle:hover {
-            color: hsla(220, 18%, 16%, 1);
-
-            & svg path {
-                fill: hsla(220, 18%, 16%, 1);
-            }
+            fill: var(--text-hover);
         }
     }
 

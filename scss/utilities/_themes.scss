@@ -6,6 +6,7 @@
     // Font Colors
     --text-primary: hsl(217, 20%, 51%);
     --text-secondary: hsl(217, 21%, 21%);
+    --text-hover: hsl(217, 21%, 21%);
 
     // Background Colors
     --bg-body: hsl(227, 100%, 98%);
@@ -13,28 +14,14 @@
     --bg-search: hsl(0, 0%, 100%);
     --bg-card-stats: hsl(227, 100%, 98%);
 
+    // Box Shadows
+    --box-shadow: 0 16px 30px -10px hsl(227, 46%, 51%, 0.2);
+
     & .logo,
     & .search__form,
     & .card__name,
     & .card__stats-value {
         color: var(--text-secondary);
-    }
-
-    & .button--search {
-        color: white;
-    }
-
-    & .card__social-item svg path,
-    & .card__social-item svg path {
-        fill: hsl(217, 35%, 45%);
-    }
-
-    & .search__form {
-        box-shadow: 0 16px 30px -10px hsla(227, 46%, 51%, 0.2);
-    }
-
-    & .card {
-        box-shadow: 0 16px 30px -10px hsla(227, 46%, 51%, 0.2);
     }
 }
 

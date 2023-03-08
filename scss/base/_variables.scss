@@ -8,9 +8,10 @@
 	// Font Colors
 	--text-primary: hsl(0, 0%, 100%);
 	--text-accent-blue: hsl(212, 100%, 50%);
-	--text-accent-light-blue: hsl(222, 44%, 70%);
+	--text-hover: hsl(222, 44%, 70%);
 	--text-disabled: hsl(222, 10%, 60%);
-	--text-accent-red: hsl(0, 91%, 62%);
+	--text-error: hsl(0, 91%, 62%);
+	--text-button: hsl(0, 0%, 100%);
 
 	// Background Colors
 	--bg-body: hsl(220, 40%, 13%);
@@ -19,6 +20,9 @@
 	--bg-button: hsl(212, 100%, 50%);
 	--bg-button-hover: hsl(212, 100%, 69%);
 	--bg-card-stats: hsl(220, 40%, 13%);
+
+	// Box Shadows
+	--box-shadow: none;
 
 	// Font Families
 	--ff-primary: "Space Mono", sans-serif;

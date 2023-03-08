@@ -5,6 +5,7 @@
 	background-color: var(--bg-card);
 	border-radius: toRem(15);
 	padding: toRem(32) toRem(24) toRem(48);
+	box-shadow: var(--box-shadow);
 
 	&__header {
 		display: flex;
