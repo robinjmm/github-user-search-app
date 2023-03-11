@@ -28,11 +28,11 @@ window.addEventListener("load", () => {
 
 	function displayToggles() {
 		if (theme.value === "light") {
-			toggleLight.classList.add("button--hidden");
-			toggleDark.classList.remove("button--hidden");
+			toggleLight.classList.add("hidden");
+			toggleDark.classList.remove("hidden");
 		} else {
-			toggleLight.classList.remove("button--hidden");
-			toggleDark.classList.add("button--hidden");
+			toggleLight.classList.remove("hidden");
+			toggleDark.classList.add("hidden");
 		}
 	}
 
