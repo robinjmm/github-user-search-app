@@ -1,11 +1,11 @@
-@use "../base/variables" as *;
+@use "../base/functions" as *;
 
 body {
 	background-color: var(--bg-body);
 	color: var(--text-primary);
 	font-family: var(--ff-primary);
-	padding-top: toRem(30);
-	padding-bottom: toRem(80);
+	padding-top: rem(30);
+	padding-bottom: rem(80);
 	font-weight: var(--fw-md);
 }
 
@@ -13,12 +13,12 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: toRem(36);
+	margin-bottom: rem(36);
 }
 
 
 footer {
-	margin-top: toRem(40);
+	margin-top: rem(40);
 	text-align: center;
 }
 

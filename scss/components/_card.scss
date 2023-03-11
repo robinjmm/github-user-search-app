@@ -1,15 +1,15 @@
-@use "../base/variables" as *;
+@use "../base/functions" as *;
 
 .card {
 	font-size: var(--fs-xs);
 	background-color: var(--bg-card);
-	border-radius: toRem(15);
-	padding: toRem(32) toRem(24) toRem(48);
+	border-radius: rem(15);
+	padding: rem(32) rem(24) rem(48);
 	box-shadow: var(--box-shadow);
 
 	&__header {
 		display: flex;
-		gap: toRem(20);
+		gap: rem(20);
 		align-items: center;
 	}
 
@@ -28,32 +28,32 @@
 	}
 
 	&__bio {
-		margin-top: toRem(33);
-		margin-bottom: toRem(23);
+		margin-top: rem(33);
+		margin-bottom: rem(23);
 	}
 
 	&__stats {
 		display: flex;
 		justify-content: space-between;
 		background-color: var(--bg-card-stats);
-		border-radius: toRem(10);
-		padding: toRem(18) toRem(14);
+		border-radius: rem(10);
+		padding: rem(18) rem(14);
 	}
 
 	&__stats-item {
 		text-align: center;
-		font-size: toRem(11);
+		font-size: rem(11);
 	}
 
 	&__stats-value {
 		display: block;
 		font-size: var(--fs-md);
 		font-weight: var(--fw-bold);
-		margin-top: toRem(8);
+		margin-top: rem(8);
 	}
 
 	&__socials {
-		margin-top: toRem(24);
+		margin-top: rem(24);
 	}
 
 	&__socials-link {
@@ -64,9 +64,9 @@
 	&__socials-item {
 		display: grid;
 		grid-template-columns: 20px auto;
-		gap: toRem(13);
+		gap: rem(13);
 		align-items: center;
-		margin-bottom: toRem(18);
+		margin-bottom: rem(18);
 
 		& svg {
 			fill: var(--text-primary);

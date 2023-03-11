@@ -1,4 +1,4 @@
-@use "../base/variables" as *;
+@use "../base/functions" as *;
 
 .button {
 	color: var(--text-primary);
@@ -14,17 +14,17 @@
 		font-size: var(--fs-xs);
 		letter-spacing: 2.5px;
 		display: flex;
-		gap: toRem(16);
+		gap: rem(16);
 	}
 
 	&--search {
 		color: var(--text-button);
 		width: 100%;
-		margin-top: toRem(10);
+		margin-top: rem(10);
 		background-color: var(--bg-button);
 		font-size: var(--fs-xs);
-		border-radius: toRem(10);
-		padding: toRem(12) toRem(16);
+		border-radius: rem(10);
+		padding: rem(12) rem(16);
 
 
 		&:active {

@@ -1,28 +1,26 @@
 /*! purgecss start ignore */
 
-@use "../base/variables" as *;
-
 [data-theme="light"] {
-    // Font Colors
-    --text-primary: hsl(217, 20%, 51%);
-    --text-secondary: hsl(217, 21%, 21%);
-    --text-hover: hsl(217, 21%, 21%);
+	// Font Colors
+	--text-primary: hsl(217, 20%, 51%);
+	--text-secondary: hsl(217, 21%, 21%);
+	--text-hover: hsl(217, 21%, 21%);
 
-    // Background Colors
-    --bg-body: hsl(227, 100%, 98%);
-    --bg-card: hsl(0, 0%, 100%);
-    --bg-search: hsl(0, 0%, 100%);
-    --bg-card-stats: hsl(227, 100%, 98%);
+	// Background Colors
+	--bg-body: hsl(227, 100%, 98%);
+	--bg-card: hsl(0, 0%, 100%);
+	--bg-search: hsl(0, 0%, 100%);
+	--bg-card-stats: hsl(227, 100%, 98%);
 
-    // Box Shadows
-    --box-shadow: 0 16px 30px -10px hsl(227, 46%, 51%, 0.2);
+	// Box Shadows
+	--box-shadow: 0 16px 30px -10px hsl(227, 46%, 51%, 0.2);
 
-    & .logo,
-    & .search__form,
-    & .card__name,
-    & .card__stats-value {
-        color: var(--text-secondary);
-    }
+	& .logo,
+	& .search__form,
+	& .card__name,
+	& .card__stats-value {
+		color: var(--text-secondary);
+	}
 }
 
 /*! purgecss end ignore */

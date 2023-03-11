@@ -1,21 +1,16 @@
+@use "base/variables";
 @use "base/fonts";
-
 @use "base/defaults";
 
 @use "layout/home";
 
 @use "components/logo";
-
 @use "components/buttons";
-
 @use "components/search-form";
-
 @use "components/card";
-
 @use "components/fa-icons";
 
 @use "layout/media-queries";
 
 @use "utilities/themes";
-
 @use "utilities/classes";

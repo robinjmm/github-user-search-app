@@ -1,7 +1,7 @@
-@use "../base/variables" as *;
+@use "../base/functions" as *;
 
 form {
-	margin-bottom: toRem(16);
+	margin-bottom: rem(16);
 }
 
 .search {
@@ -11,14 +11,14 @@ form {
 		background-image: url("/images/icon-search.svg");
 		background-repeat: no-repeat;
 		background-position-y: center;
-		background-position-x: toRem(16);
+		background-position-x: rem(16);
 		font-size: var(--fs-xs);
 		color: var(--text-primary);
 		background-color: var(--bg-search);
 		width: 100%;
-		border-radius: toRem(15);
+		border-radius: rem(15);
 		border: none;
-		padding: toRem(18) 0 toRem(18) toRem(48);
+		padding: rem(18) 0 rem(18) rem(48);
 		box-shadow: var(--box-shadow);
 
 		&::placeholder {

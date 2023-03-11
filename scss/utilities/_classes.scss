@@ -1,22 +1,19 @@
 /*! purgecss start ignore */
-
-@use "../base/variables" as *;
-
 .disabled {
-    color: var(--text-disabled);
-    pointer-events: none;
+	color: var(--text-disabled);
+	pointer-events: none;
 }
 
 .not-allowed {
-    cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 .button--hidden {
-    display: none;
+	display: none;
 }
 
 .error--hidden {
-    display: none;
+	display: none;
 }
 
 /*! purgecss end ignore */
