@@ -45,7 +45,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 		if (!data.message) {
 			displayUserData(data);
 			searchForm.value = "";
+			searchForm.placeholder = "Search GitHub username...";
 		} else {
+			searchForm.placeholder = "";
 			errorMessage.innerText = "No results";
 			errorMessage.classList.remove("error--hidden");
 		}
