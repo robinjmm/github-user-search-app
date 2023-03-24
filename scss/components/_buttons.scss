@@ -11,7 +11,7 @@
 
 	&--theme-toggle {
 		background-color: transparent;
-		font-size: var(--fs-xs);
+		font-size: var(--13px);
 		letter-spacing: 2.5px;
 		display: flex;
 		gap: rem(16);
@@ -22,7 +22,7 @@
 		width: 100%;
 		margin-top: rem(10);
 		background-color: var(--bg-button);
-		font-size: var(--fs-xs);
+		font-size: var(--13px);
 		border-radius: rem(10);
 		padding: rem(12) rem(16);
 

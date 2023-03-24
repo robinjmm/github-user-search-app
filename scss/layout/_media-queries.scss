@@ -70,7 +70,7 @@
 	}
 
 	.search__form {
-		font-size: var(--fs-md);
+		font-size: var(--16px);
 		padding-top: rem(22);
 		padding-bottom: rem(22);
 		padding-left: rem(80);
@@ -83,16 +83,16 @@
 
 	.search__error {
 		right: 120px;
-		font-size: var(--fs-sm);
+		font-size: var(--15px);
 	}
 
 	.button--search {
-		font-size: var(--fs-md);
+		font-size: var(--16px);
 		right: 10px;
 	}
 
 	.card {
-		font-size: var(--fs-sm);
+		font-size: var(--15px);
 		padding: rem(40);
 
 		&__avatar {
@@ -101,11 +101,11 @@
 		}
 
 		&__name {
-			font-size: var(--fs-xl);
+			font-size: var(--26px);
 		}
 
 		&__username {
-			font-size: var(--fs-md);
+			font-size: var(--16px);
 		}
 
 		&__bio {
@@ -118,7 +118,7 @@
 		}
 
 		&__stats-value {
-			font-size: var(--fs-lg);
+			font-size: var(--22px);
 		}
 
 		&__socials {

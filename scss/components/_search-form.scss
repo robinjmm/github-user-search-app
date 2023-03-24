@@ -12,7 +12,7 @@ form {
 		background-repeat: no-repeat;
 		background-position-y: center;
 		background-position-x: rem(16);
-		font-size: var(--fs-xs);
+		font-size: var(--13px);
 		color: var(--text-primary);
 		background-color: var(--bg-search);
 		width: 100%;
@@ -23,12 +23,12 @@ form {
 
 		&::placeholder {
 			color: var(--text-primary);
-			font-size: var(--fs-xs);
+			font-size: var(--13px);
 		}
 	}
 
 	&__error {
-		font-size: var(--fs-xs);
+		font-size: var(--13px);
 		font-weight: var(--fw-bold);
 		display: inline-block;
 		width: 100%;
