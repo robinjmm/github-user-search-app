@@ -40,8 +40,7 @@ function updateAvatar(className, data) {
 
 function updatePublicName(className, data) {
 	const publicName = document.querySelector(className);
-	const content = data || "";
-	publicName.innerText = content;
+	publicName.innerText = data || "";
 }
 
 function updateUsername(className, data, link) {
@@ -53,8 +52,7 @@ function updateUsername(className, data, link) {
 
 function updateJoinedDate(className, data) {
 	const joinedDate = document.querySelector(className);
-	const date = convertDate(data);
-	joinedDate.innerText = date;
+	joinedDate.innerText = convertDate(data);
 }
 
 function updateBio(className, data) {
@@ -70,8 +68,7 @@ function updateBio(className, data) {
 
 function updateStats(className, data) {
 	const userStats = document.querySelector(className);
-	const value = data === 0 ? 0 : data;
-	userStats.innerText = value;
+	userStats.innerText = data === 0 ? 0 : data;
 }
 
 function updateLocationAndCompany(className, data) {
@@ -107,27 +104,43 @@ function updateTwitter(className, data) {
 }
 
 export default function displayUserData(data) {
-	updateAvatar(".js-avatar", data.avatar_url);
+	const {
+		avatar_url: avatarUrl,
+		html_url: htmlUrl,
+		created_at: createdAt,
+		public_repos: publicRepos,
+		twitter_username: twitterUsername,
+		name,
+		login,
+		bio,
+		followers,
+		following,
+		blog,
+		location,
+		company,
+	} = data;
 
-	updatePublicName(".js-public-name", data.name);
+	updateAvatar(".js-avatar", avatarUrl);
 
-	updateUsername(".js-username", data.login, data.html_url);
+	updatePublicName(".js-public-name", name);
 
-	updateJoinedDate(".js-joined-date", data.created_at);
+	updateUsername(".js-username", login, htmlUrl);
 
-	updateBio(".js-bio", data.bio);
+	updateJoinedDate(".js-joined-date", createdAt);
 
-	updateStats(".js-repos", data.public_repos);
+	updateBio(".js-bio", bio);
 
-	updateStats(".js-followers", data.followers);
+	updateStats(".js-repos", publicRepos);
 
-	updateStats(".js-following", data.following);
+	updateStats(".js-followers", followers);
 
-	updateWebsite(".js-website", data.blog);
+	updateStats(".js-following", following);
 
-	updateTwitter(".js-twitter", data.twitter_username);
+	updateWebsite(".js-website", blog);
 
-	updateLocationAndCompany(".js-location", data.location);
+	updateTwitter(".js-twitter", twitterUsername);
 
-	updateLocationAndCompany(".js-company", data.company);
+	updateLocationAndCompany(".js-location", location);
+
+	updateLocationAndCompany(".js-company", company);
 }
